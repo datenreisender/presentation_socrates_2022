@@ -8,15 +8,54 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<style>
+			:root {
+				--nordic-blue: #00a9ce;
+				--nordic-sky: #6ad1e3;
+				--blue-slate: #0033a0;
+
+				/* --r-main-color: var(--nordic-blue); */
+				--r-heading-color: var(--nordic-blue);
+
+				--r-link-color: var(--blue-slate);
+
+				--r-heading-text-transform: none;
+			}
+
+			/* Color the bullets of lists in Nordic blue */
+			.reveal ul {
+				list-style-type: none;
+			}
+
+			.reveal ul ul {
+				list-style-type: none;
+			}
+
+			ul li::before {
+				content: "▪";
+				color: var(--nordic-blue);
+				font-weight: bold;
+				display: inline-block;
+				width: 1em;
+				margin-left: -1em;
+			}
+
+			ul li li::before {
+				font-weight: normal;
+				font-size: smaller;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-markdown="presentation.md"
+				<section
+					data-markdown="presentation.md"
 					data-separator="^===\n"
 					data-separator-vertical="^==\n"
 					data-separator-notes="^Note:">
