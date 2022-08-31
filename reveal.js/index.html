@@ -107,6 +107,7 @@
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
+			Reveal.configure({pdfSeparateFragments: location.search !== "?print-pdf"})
 			Reveal.initialize({
 				hash: true,
 
